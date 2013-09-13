@@ -14,7 +14,6 @@ var audioStream,
 
 record.onclick = function() 
 {
-	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
     if (!audioStream)
         navigator.getUserMedia(audioConstraints, function(stream) 
         {
