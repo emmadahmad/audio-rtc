@@ -9,7 +9,7 @@
 
 		currentRoom = null,
 
-		serverAddress = 'http://localhost',
+		//serverAddress = 'http://localhost',
 		serverDisplayName = 'Server',
 		serverDisplayColor = '#1c5380',
 
@@ -255,7 +255,7 @@
 
 	function connect()
 	{
-		socket = io.connect(serverAddress);
+		socket = io.connect();
 		bindSocketEvents();
 	}
 
