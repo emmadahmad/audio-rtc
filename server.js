@@ -8,7 +8,7 @@ var	file = new static.Server({
 		headers : {'Access-Control-Allow-Origin' : '*'}
 	});
 	
-server.listen(2013);
+server.listen(process.env.PORT || 2013);
 
 function handler(req, res)
 {
