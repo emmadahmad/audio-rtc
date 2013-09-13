@@ -14,6 +14,7 @@ var audioStream,
 
 record.onclick = function() 
 {
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
     if (!audioStream)
         navigator.getUserMedia(audioConstraints, function(stream) 
         {
@@ -55,7 +56,7 @@ stop.onclick = function()
         recorder.stopRecording(function(url) 
         {
         	audioLink = url;
-            document.getElementById('audio-url').innerHTML = '<a href="' + url + '" target="_blank">Download</a><p class="information">Right click and choose "Save Link as" to download</p>';
+            document.getElementById('audio-url').innerHTML = '<a href="' + url + '" target="_blank">Download</a>';
         });
 };
 
