@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta name='keywords' content='WebRTC, HTML5, JavaScript' />
 <meta name='description' content='WebRTC Reference App' />
 <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
@@ -102,6 +102,7 @@
 			</div>
 			<div class="list-group-item">
 				<audio id="audioPlayer" autoplay="" loop="" controls=""> </audio>
+				<div id="time">0:00</div>
 			</div>
 			<div class="list-group-item" id="audio-url">
 				Start
@@ -118,10 +119,20 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src='js/jquery.tmpl.min.js'></script>
-<!--<script src='js/adapter.js'></script>-->
+<script src='js/adapter.js'></script>
 <script src='js/main.js'></script>
 <script src='js/RecordRTC.js'></script>
 <script src='js/webrtc.js'></script>
 <script src='js/audio.js'></script>
+<script>
+$(document).ready()
+{
+	$.getScript('js/recorderlib.js', function()
+	{
+		$.getScript('js/initialize.js', function()
+		{});
+	});
+}
+</script>
 </body>
 </html>
